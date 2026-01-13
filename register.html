@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب | Taste of Amro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Taste of Amro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="login.html">دخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="max-width: 500px; margin-top: 50px;">
+        <div class="card">
+            <div class="card-body">
+                <h2 style="margin-bottom: 20px;">إنشاء حساب جديد</h2>
+                <form onsubmit="alert('تم إنشاء الحساب بنجاح!'); return false;">
+                    <div class="form-group">
+                        <label>الاسم الكامل:</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني:</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور:</label>
+                        <input type="password" class="form-control" required minlength="8">
+                        <small style="color: #888;">يجب أن تكون 8 أحرف على الأقل</small>
+                    </div>
+                    <button type="submit" class="btn btn-success" style="width: 100%;">تسجيل</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <h3>Taste of Amro</h3>
+            <p>نقدم أفضل المأكولات العربية والعالمية منذ 2020.</p>
+            <div class="social-icons" style="margin-top: 15px;">
+                <a href="https://www.facebook.com/share/1AvathRtNP/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                </a>
+
+                <a href="https://www.instagram.com/_amor.y" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/967779029259" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9em;">© 2026 Taste of Amro. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="engine1/script.js"></script>
+</body>
+
+</html>

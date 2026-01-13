@@ -1,0 +1,70 @@
+#wowslider-container1 {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    height: 400px;
+    margin: 20px auto;
+    border: 4px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.ws_images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ws_images ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ws_images ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.ws_images ul li.ws_active {
+    opacity: 1;
+    z-index: 5;
+}
+
+.ws_images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ws_bullets {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.ws_bullets a {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+
+.ws_bullets a.ws_sel_bull {
+    background: #0d6efd;
+    transform: scale(1.2);
+}

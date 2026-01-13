@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الطعام Taste of Amro | مطعم تيست أوف عَمرو</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1><i class="fas fa-utensils"></i> Taste of Amro | مطعم تيست أوف عَمرو</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="menu.html" class="active">قائمة الطعام</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="login.html">دخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="text-align: center; margin: 30px 0; color: #2c3e50;">قائمة الطعام المميزة</h1>
+
+        <div class="row">
+            <div class="col-third card">
+                <img src="images/mandi.jpg" alt="مندي لحم" onerror="this.src='images/food1.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">مندي لحم</h3>
+                    <p>لحم ضأن فاخر مطهو في التنور مع الأرز.</p>
+                    <span class="price">4500 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('مندي لحم')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/kabsa.jpg" alt="كبسة دجاج" onerror="this.src='images/food1.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">كبسة دجاج</h3>
+                    <p>دجاج مع الأرز والتوابل الخليجية الخاصة.</p>
+                    <span class="price">3500 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('كبسة دجاج')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/burger.jpg" alt="برجر" onerror="this.src='images/food1.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">برجر </h3>
+                    <p>لحم بقري طازج مع الجبن والخضروات.</p>
+                    <span class="price">1500 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('برجر')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/pizza.jpg" alt="بيتزا" onerror="this.src='images/food2.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">بيتزا ايطالية</h3>
+                    <p>بيتزا إيطالية بجميع الإضافات والجبن.</p>
+                    <span class="price">2000 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('بيتزا')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/mshawi.jpg" alt="مشاوي" onerror="this.src='images/mshawi.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">مشاوي مشكل</h3>
+                    <p>تشكيلة فاخرة من الكباب والشيش طاووق.</p>
+                    <span class="price">5000 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('مشاوي مشكل')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/fish.jpg" alt="سمك" onerror="this.src='images/fish.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">سمك موفا</h3>
+                    <p>سمك طازج مشوي في التنور مع الخبز.</p>
+                    <span class="price">4000 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('سمك موفا')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/fahsa.jpg" alt="فحسة" onerror="this.src='images/slide1.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">فحسة باللحم</h3>
+                    <p>وجبة يمنية تقليدية ساخنة من اللحم والمرق.</p>
+                    <span class="price">2500 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('فحسة')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/saltah.jpg" alt="سلتة" onerror="this.src='images/slide2.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">سلتة صنعاني</h3>
+                    <p>خضروات مطبوخة في المقلى الحجري مع الحلبة.</p>
+                    <span class="price">2000 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('سلتة')">أضف للسلة</button>
+                </div>
+            </div>
+
+            <div class="col-third card">
+                <img src="images/pasta.jpg" alt="مكرونة" onerror="this.src='images/slide3.jpg'">
+                <div class="card-body">
+                    <h3 class="card-title">مكرونة بشاميل</h3>
+                    <p>مكرونة بالفرن مع اللحم المفروم وصلصة البشاميل.</p>
+                    <span class="price">2500 ريال</span>
+                    <button class="btn btn-success" onclick="addToCart('مكرونة')">أضف للسلة</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        function addToCart(item) {
+            alert("تمت إضافة (" + item + ") إلى السلة بنجاح!");
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <h3>Taste of Amro | مطعم تيست أوف عَمرو</h3>
+            <p>نقدم أفضل المأكولات العربية والعالمية منذ 2020.</p>
+            <div class="social-icons" style="margin-top: 15px;">
+                <a href="https://www.facebook.com/share/1AvathRtNP/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                </a>
+
+                <a href="https://www.instagram.com/_amor.y" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/967779029259" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.9em;">© 2026 Taste of Amro. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="engine1/script.js"></script>
+</body>
+
+</html>
