@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <div class="container header-content">
             <div class="logo">
                 <h1><i class="fas fa-utensils"></i> Taste of Amro | مطعم تيست أوف عَمرو</h1>
@@ -20,6 +20,30 @@
                     <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="menu.html">قائمة الطعام</a></li>
                     <li><a href="contact.html" class="active">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+
+     <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1><i class="fas fa-utensils"></i> Taste of Amro</h1>
+            </div>
+
+            <!-- زر القائمة للجوال -->
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- القائمة -->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="menu.html">قائمة الطعام</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li><a href="login.html">دخول</a></li>
                 </ul>
             </nav>
         </div>
@@ -95,6 +119,24 @@
         </div>
     </footer>
     <script src="engine1/script.js"></script>
+     <script>
+        // سكريبت بسيط لعرض/إخفاء القائمة
+        const menuBtn = document.getElementById('menuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        menuBtn.addEventListener('click', function () {
+            mainNav.classList.toggle('show');
+        });
+
+        // إغلاق القائمة عند النقر على رابط
+        const navLinks = document.querySelectorAll('#mainNav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                mainNav.classList.remove('show');
+            });
+        });
+    </script>
 </body>
+
 
 </html>
