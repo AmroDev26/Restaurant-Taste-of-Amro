@@ -41,6 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .logo h1 {
@@ -50,6 +51,7 @@ header {
     gap: 10px;
 }
 
+/* === القائمة الرئيسية === */
 nav ul {
     display: flex;
     gap: 20px;
@@ -59,14 +61,35 @@ nav a {
     color: rgba(255, 255, 255, 0.8);
     transition: 0.3s;
     font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
 }
 
 nav a:hover,
 nav a.active {
     color: #f39c12;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-/* === WowSlider (محاكاة التصميم) === */
+/* === زر القائمة للجوال === */
+.menu-btn {
+    display: none;
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+/* === WowSlider === */
 #wowslider-container1 {
     display: block;
     position: relative;
@@ -275,15 +298,61 @@ footer {
 /* === التجاوب (Mobile) === */
 @media (max-width: 768px) {
 
-    .header-content,
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    /* إظهار زر القائمة */
+    .menu-btn {
+        display: block;
     }
 
+    /* إخفاء القائمة الأصلية */
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #2c3e50;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    /* عند النقر على الزر تظهر القائمة */
+    nav.show {
+        display: block;
+    }
+
+    /* تعديل تنسيق القائمة للجوال */
     nav ul {
-        margin-top: 15px;
-        gap: 10px;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0;
+    }
+
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: right;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px 15px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        padding-right: 20px;
+    }
+
+    /* تعديل باقي العناصر للجوال */
+    .header-content {
+        flex-direction: row;
+        text-align: center;
     }
 
     .col-half,
@@ -296,5 +365,21 @@ footer {
 
     #wowslider-container1 {
         height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
